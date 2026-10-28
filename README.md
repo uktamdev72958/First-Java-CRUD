@@ -1,63 +1,71 @@
-# My Application README
+# Student Management System
 
-- [ ] TODO Replace or update this README with instructions relevant to your application
+A web-based Student Management System built with Java, Spring Boot, and Vaadin. The application provides a simple interface to manage student records using CRUD operations.
 
-To start the application in development mode, import it into your IDE and run the `Application` class. 
-You can also start the application from the command line by running: 
+## Features
 
-```bash
-./mvnw
-```
+* **Create:** Add a new student with a name, email, and major.
+* **Read:** View student records in a table.
+* **Update:** Select a student and modify their information.
+* **Delete:** Remove a student record.
+* **Clear:** Clear the form fields.
 
-To build the application in production mode, run:
+## Technologies Used
 
-```bash
-./mvnw package
-```
+* Java
+* Spring Boot
+* Vaadin
+* Maven
 
-To build a Docker image, run:
+## Requirements
 
-```bash
-docker build -t my-application:latest .
-```
+* Java Development Kit (JDK)
+* Maven Wrapper (included in this repository)
 
-If you use commercial components, pass the license key as a build secret:
+## How to Run
 
-```bash
-docker build --secret id=proKey,src=$HOME/.vaadin/proKey -t my-application:latest .
-```
+1. Clone or download this repository.
 
-To run the image, run:
+2. Open a terminal in the project directory.
 
-```bash
-docker run -p 8080:8080 -m 2g my-application:latest
-```
+3. Run the application on Windows:
 
-The application is then available at http://localhost:8080. The `-m` option sets the memory limit of the container. The
-application uses up to 75% of it for the Java heap, which holds the UI state of all users, so adjust the limit to fit
-your application.
+   ```powershell
+   .\mvnw.cmd spring-boot:run
+   ```
 
-## Agentic Development
+4. Open your browser and visit:
 
-If you develop with an AI coding agent, such as Claude Code or Codex, enable the Vaadin Dev Loop. It lets the agent make
-its changes live in the running application with a single command, and tells it whether they took effect, without
-restarting the application or checking screenshots. To enable it, run:
+   http://localhost:8080/
 
-```bash
-./mvnw vaadin:install-dev-cli
-```
+To stop the application, press `Ctrl + C` in the terminal.
 
-This installs the Dev Loop CLI into `.vaadin/`, and skills that teach your agent how to use it into `.agents/skills/` and
-`.claude/skills/`. Commit these files with the rest of the project, and run the command again after upgrading Vaadin.
+## Screenshots
 
-The Dev Loop needs to own the application process, so start the application with `.vaadin/vaadin-dev start` instead of
-`./mvnw` or your IDE.
+### Application Running
 
-The Dev Loop is a preview feature. To learn more, including how to give your agent access to the Vaadin documentation,
-see the [Dev Loop tutorial](https://vaadin.com/docs/v25/building-apps/agentic-development/dev-loop-tutorial).
+![Application Running](doc/App_running.png)
 
-## Getting Started
+### Create Student
 
-The [Quick Start](https://vaadin.com/docs/v25/getting-started/quick-start) tutorial helps you get started with Vaadin in 
-around 10 minutes. This tutorial walks you through building a simple application, introducing the core concepts along 
-the way.
+![Create Student](doc/create.png)
+
+### Update Student
+
+![Update Student](doc/update.png)
+
+### Delete Student
+
+![Delete Student](doc/delete.png)
+
+### Application Startup Logs
+
+![Startup Logs](doc/startup-logs.png)
+
+## Notes
+
+Student records are stored in memory. They may be lost when the application restarts.
+
+## License
+
+See the [LICENSE](LICENSE) file for license information.

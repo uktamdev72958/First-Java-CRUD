@@ -62,6 +62,13 @@ To stop the application, press `Ctrl + C` in the terminal.
 
 ![Startup Logs](doc/startup-logs.png)
 
+## Git Commit History
+
+The screenshot below documents the project's Git commit history.
+
+![Git Commit History](doc/commit-history.png)
+
+
 ## Notes
 
 Student records are stored in memory. They may be lost when the application restarts.
